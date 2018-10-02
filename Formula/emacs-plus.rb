@@ -133,6 +133,13 @@ class EmacsPlus < Formula
       url "https://gist.githubusercontent.com/aatxe/260261daf70865fbf1749095de9172c5/raw/214b50c62450be1cbee9f11cecba846dd66c7d06/patch-multicolor-font.diff"
       sha256 "5af2587e986db70999d1a791fca58df027ccbabd75f45e4a2af1602c75511a8c"
     end
+    patch do
+      url "https://github.com/emacs-mirror/emacs/compare/scratch/ns-drawing.patch"
+      sha256 "95aad40f90b3750858c700152d46d5bf5062f12c76d77dd838998c86301fdcb8"
+    end
+    patch do
+      url "http://emacs.1067599.n8.nabble.com/attachment/465838/0/0001-Fix-crash-on-flush-to-display-bug-32812.patch"
+    end
   end
 
   if build.with? "xwidgets"
